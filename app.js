@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const customerRoutes = require('./routes/customerRoutes');
 const productRoutes = require('./routes/productRoutes');
@@ -8,6 +9,7 @@ const app = express();
 const port = 3000;
 
 // Middleware
+app.use(cors()); // Enable CORS for all routes
 app.use(bodyParser.json());
 
 // Routes
