@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "name": "Ipads",
+    "rate": "5004",
+    "type": "electronics",
+    "id": "afed47d0-58f6-407c-868c-75b487f16987",
+    "createdOn": "2024-06-08T16:09:02.499Z"
+  },
+  {
+    "name": "Motorolla Duo",
+    "rate": "25000.00",
+    "type": "Phone",
+    "id": "fae6bdad-b81c-42b5-a7fe-02b48d860187",
+    "createdOn": "2024-06-09T08:28:41.804Z"
+  },
+  {
+    "name": "Canon 350K",
+    "rate": "3500.00",
+    "type": "Camera",
+    "id": "56c85832-0d17-49d3-8b88-60cb9024c287",
+    "createdOn": "2024-06-09T08:36:06.091Z"
+  }
+]

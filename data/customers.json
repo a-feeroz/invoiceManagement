@@ -1,1 +1,64 @@
-[]
+[
+  {
+    "name": "Navodita Tandon",
+    "email": "navodita@gmail.com",
+    "id": "bb9b5216-6ffa-4837-9776-75c41bfa2748",
+    "createdOn": "2024-06-08T15:34:45.612Z"
+  },
+  {
+    "name": "Arshad Feeroz",
+    "email": "arshad@gmail.com",
+    "id": "98a2aa1e-45ac-404d-a188-48ff77243db9",
+    "createdOn": "2024-06-08T15:35:13.801Z",
+    "phone": "7645990023"
+  },
+  {
+    "name": "Akash Bodhijani",
+    "email": "akash.bodhijani@gmail.com",
+    "id": "50f86d99-b359-4f29-a1d9-d83b1e25020e",
+    "createdOn": "2024-06-08T18:40:46.178Z",
+    "phone": "8981892664"
+  },
+  {
+    "name": "Prince Singh",
+    "email": "prince@gmail.com",
+    "phone": "7766553344",
+    "createdOn": "2024-06-09T05:48:22.832Z",
+    "id": "54a8ced8-b33e-463a-8b7a-ac7ae4b11542"
+  },
+  {
+    "name": "Ram Mohan",
+    "email": "ram@myntra.com",
+    "phone": "8981345621",
+    "createdOn": "2024-06-09T05:49:15.743Z",
+    "id": "c30170a5-14f9-41a6-872d-dcb543392307"
+  },
+  {
+    "name": "Manish Gupta",
+    "email": "manish@myntra.com",
+    "phone": "8981345621",
+    "createdOn": "2024-06-09T05:49:45.439Z",
+    "id": "455fd7b5-3758-485f-b488-c0889a0ef66d"
+  },
+  {
+    "name": "Rashid Feeroz",
+    "email": "rashid.2008feroz@gmail.com",
+    "phone": "8981892663",
+    "createdOn": "2024-06-09T06:01:33.701Z",
+    "id": "96da4187-e25d-4edc-9729-015cbbf435f1"
+  },
+  {
+    "name": "Deepika Padukones",
+    "email": "deepika.padukone@gmail.com",
+    "phone": "8981892663",
+    "createdOn": "2024-06-09T06:29:23.734Z",
+    "id": "a6ad4015-4d01-4e79-a658-7ad9b3613a90"
+  },
+  {
+    "name": "Rajat Sharma",
+    "email": "Rajat.sharma0012@gmail.com",
+    "phone": "7877233891",
+    "id": "fa9aff00-b0fa-464d-b391-9d64b2f50aa1",
+    "createdOn": "2024-06-09T08:22:43.651Z"
+  }
+]

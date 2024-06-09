@@ -1,9 +1,16 @@
 const productModel = require('../models/productModel');
 
 exports.getAllProducts = (req, res) => {
-    const products = productModel.getAll();
-    res.json(products);
+    // Parse query parameters
+    const { offset = 0, limit = 10, search = '', sortBy = 'createdOn', sortOrder = 'desc' } = req.query;
+
+    // Call your model method to fetch products with pagination, search, and sorting
+    const { products, totalCount } = productModel.getAll(offset, limit, search, sortBy, sortOrder);
+
+    // Send response with products and total count
+    res.json({ products, totalCount });
 };
+
 
 exports.createProduct = (req, res) => {
     const newProduct = req.body;

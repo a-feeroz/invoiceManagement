@@ -1,9 +1,16 @@
 const invoiceModel = require('../models/invoiceModel');
 
 exports.getAllInvoices = (req, res) => {
-    const invoices = invoiceModel.getAll();
-    res.json(invoices);
+    // Parse query parameters
+    const { offset = 0, limit = 10, search = '', sortBy = 'createdOn', sortOrder = 'desc' } = req.query;
+
+    // Call your model method to fetch invoices with pagination, search, and sorting
+    const { invoices, totalCount } = invoiceModel.getAll(offset, limit, search, sortBy, sortOrder);
+
+    // Send response with invoices and total count
+    res.json({ invoices, totalCount });
 };
+
 
 exports.createInvoice = (req, res) => {
     const newInvoice = req.body;

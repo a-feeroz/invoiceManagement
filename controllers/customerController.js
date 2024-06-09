@@ -1,8 +1,14 @@
 const customerModel = require('../models/customerModel');
 
 exports.getAllCustomers = (req, res) => {
-    const customers = customerModel.getAll();
-    res.json(customers);
+    // Parse query parameters
+    const { offset = 0, limit = 10, search = '', sortBy = 'createdOn', sortOrder = 'desc' } = req.query;
+
+    // Call your model method to fetch customers with pagination, search, and sorting
+    const { customers, totalCount } = customerModel.getAll(offset, limit, search, sortBy, sortOrder);
+
+    // Send response with customers and total count
+    res.json({ customers, totalCount });
 };
 
 exports.createCustomer = (req, res) => {

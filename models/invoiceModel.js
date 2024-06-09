@@ -13,8 +13,38 @@ function writeData(filePath, data) {
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
 }
 
-exports.getAll = () => {
-    return readData(invoiceDataPath);
+exports.getAll = (offset, limit, search, sortBy, sortOrder) => {
+    // Read data from file
+    let invoices = readData(invoiceDataPath);
+    
+    // Apply search filter
+    if (search) {
+        invoices = invoices.filter(invoice =>
+            Object.values(invoice).some(value => {
+                if(typeof value === 'string') return value.toLowerCase().includes(search.toLowerCase())
+                else if(typeof value === 'number') return value.toString().includes(search.toString())
+            })
+        );
+    }
+
+    // Apply sorting
+    invoices.sort((a, b) => {
+        if (sortBy === 'totalAmount') {
+            const amountA = parseFloat(a.totalAmount);
+            const amountB = parseFloat(b.totalAmount);
+            return sortOrder === 'asc' ? amountA - amountB : amountB - amountA;
+        } else if (sortBy === 'created_at') {
+            return sortOrder === 'asc' ? new Date(a.created_at) - new Date(b.created_at) : new Date(b.created_at) - new Date(a.created_at);
+        }
+        return 0;
+    });
+
+    // Apply pagination
+    const totalCount = invoices.length;
+    invoices = invoices.slice(offset, offset + limit);
+
+    // Return invoices and total count
+    return { invoices, totalCount };
 };
 
 exports.create = (invoice) => {
@@ -27,7 +57,7 @@ exports.create = (invoice) => {
 
     const { line_items, ...invoiceData } = invoice;
 
-    invoiceData.total_amount = line_items.reduce((total, item) => total + item.amount, 0);
+    // invoiceData.total_amount = line_items.reduce((total, item) => total + item.amount, 0);
 
     invoices.push(invoiceData);
     writeData(invoiceDataPath, invoices);
