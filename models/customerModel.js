@@ -37,7 +37,8 @@ exports.getAll = (offset, limit, search, sortBy, sortOrder) => {
 
     // Apply pagination
     const totalCount = customers.length;
-    customers = customers.slice(offset, offset + limit);
+   // console.log(">>>", offset, limit, Number(offset) + Number(limit) )
+    customers = customers.slice(offset, Number(offset) + Number(limit));
 
     // Return customers and total count
     return { customers, totalCount };

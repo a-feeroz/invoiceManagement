@@ -1,23 +1,98 @@
 [
   {
-    "name": "Ipads",
-    "rate": "5004",
-    "type": "electronics",
-    "id": "afed47d0-58f6-407c-868c-75b487f16987",
-    "createdOn": "2024-06-08T16:09:02.499Z"
-  },
-  {
-    "name": "Motorolla Duo",
-    "rate": "25000.00",
-    "type": "Phone",
-    "id": "fae6bdad-b81c-42b5-a7fe-02b48d860187",
-    "createdOn": "2024-06-09T08:28:41.804Z"
-  },
-  {
-    "name": "Canon 350K",
+    "name": "Canon 350KZ Model",
     "rate": "3500.00",
     "type": "Camera",
     "id": "56c85832-0d17-49d3-8b88-60cb9024c287",
     "createdOn": "2024-06-09T08:36:06.091Z"
+  },
+  {
+    "name": "iphone 15 pro",
+    "type": "Phones",
+    "rate": 999,
+    "id": "484bf0ac-3e90-439f-be4e-abaf8e495596",
+    "createdOn": "2024-06-09T15:04:35.555Z"
+  },
+  {
+    "name": "iWatch",
+    "rate": "49000",
+    "type": "Watches",
+    "id": "08676aca-e797-4400-a614-137ed5ba723e",
+    "createdOn": "2024-06-10T10:48:38.556Z"
+  },
+  {
+    "name": "Canon 3500k",
+    "email": "",
+    "phone": "",
+    "type": "Cameras",
+    "rate": "4500",
+    "id": "23df201c-0235-47e4-9767-2db73aa659f5",
+    "createdOn": "2024-06-10T10:48:57.711Z"
+  },
+  {
+    "name": "iPad pro",
+    "email": "",
+    "phone": "",
+    "type": "Tablets",
+    "rate": "100000",
+    "id": "775ee13d-8d7d-4fb1-bb10-7804720d1c60",
+    "createdOn": "2024-06-10T10:49:17.530Z"
+  },
+  {
+    "name": "Macbook Air",
+    "email": "",
+    "phone": "",
+    "type": "Laptops",
+    "rate": "150000",
+    "id": "305f6a28-64c7-4206-bf2e-c560680c0c6a",
+    "createdOn": "2024-06-10T10:49:34.072Z"
+  },
+  {
+    "name": "Macbook Pro",
+    "email": "",
+    "phone": "",
+    "type": "Laptops",
+    "rate": "200000",
+    "id": "c7ad3471-5b37-46d5-8124-28483f74cf17",
+    "createdOn": "2024-06-10T10:49:45.954Z"
+  },
+  {
+    "name": "Macbook Charger",
+    "email": "",
+    "phone": "",
+    "type": "Accessories",
+    "rate": "15000",
+    "id": "cae93862-5c7b-491c-8036-9a7284bd1c15",
+    "createdOn": "2024-06-10T10:51:46.553Z"
+  },
+  {
+    "name": "Kona Extension Cord",
+    "rate": "250",
+    "type": "Accessories",
+    "id": "4233da2c-f827-49ee-8210-c710a94731ba",
+    "createdOn": "2024-06-10T10:52:17.013Z"
+  },
+  {
+    "name": "Playstation 5",
+    "rate": "50000",
+    "type": "Gaming Console",
+    "id": "4e430a4a-ca60-4e5f-8ee7-3b4097b6c6e5",
+    "createdOn": "2024-06-10T10:53:58.603Z"
+  },
+  {
+    "name": "Luminous Invertor",
+    "rate": "20000",
+    "type": "Powerbackups",
+    "id": "9733d25c-c6cb-44ef-8267-a4fdbb500665",
+    "createdOn": "2024-06-10T15:38:53.021Z"
+  },
+  {
+    "name": "Samsung AV500 Speaker",
+    "email": "",
+    "phone": "",
+    "type": "Speakers",
+    "rate": "25000",
+    "id": "8434ee8f-1f10-492b-95f5-bf2e801b5950",
+    "createdOn": "2024-06-10T15:39:21.890Z"
   }
 ]

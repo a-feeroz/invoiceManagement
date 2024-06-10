@@ -2,7 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 const invoiceDataPath = path.join(__dirname, '../data/invoices.json');
+const customerDataPath = path.join(__dirname, '../data/customers.json');
 const lineItemsDataPath = path.join(__dirname, '../data/invoice_line_items.json');
+const productDataPath = path.join(__dirname, '../data/products.json');
 
 function readData(filePath) {
     const jsonData = fs.readFileSync(filePath);
@@ -16,16 +18,7 @@ function writeData(filePath, data) {
 exports.getAll = (offset, limit, search, sortBy, sortOrder) => {
     // Read data from file
     let invoices = readData(invoiceDataPath);
-    
-    // Apply search filter
-    if (search) {
-        invoices = invoices.filter(invoice =>
-            Object.values(invoice).some(value => {
-                if(typeof value === 'string') return value.toLowerCase().includes(search.toLowerCase())
-                else if(typeof value === 'number') return value.toString().includes(search.toString())
-            })
-        );
-    }
+    const customers = readData(customerDataPath);
 
     // Apply sorting
     invoices.sort((a, b) => {
@@ -38,6 +31,22 @@ exports.getAll = (offset, limit, search, sortBy, sortOrder) => {
         }
         return 0;
     });
+
+    // Add customer name to each invoice
+    invoices = invoices.map(invoice => {
+        const customer = customers.find(cust => cust.id === invoice.customer_id);
+        return { ...invoice, customer_name: customer ? customer.name : 'Unknown' };
+    });
+
+    // Apply search filter
+    if (search) {
+        invoices = invoices.filter(invoice =>
+            Object.values(invoice).some(value => {
+                if(typeof value === 'string') return value.toLowerCase().includes(search.toLowerCase())
+                else if(typeof value === 'number') return value.toString().includes(search.toString())
+            })
+        );
+    }
 
     // Apply pagination
     const totalCount = invoices.length;
@@ -76,12 +85,23 @@ exports.create = (invoice) => {
 
 exports.getById = (id) => {
     const invoices = readData(invoiceDataPath);
+    const customers = readData(customerDataPath);
+    const lineItems = readData(lineItemsDataPath);
+    const products = readData(productDataPath);
+
     const invoice = invoices.find(invoice => invoice.invoice_id === id);
 
     if (invoice) {
-        const lineItems = readData(lineItemsDataPath);
-        const invoiceLineItems = lineItems.filter(item => item.invoice_id === id);
-        return { ...invoice, line_items: invoiceLineItems };
+        const invoiceLineItems = lineItems.filter(item => item.invoice_id === id).map(item => {
+            const product = products.find(prod => prod.id === item.product_id);
+            return { ...item, product_name: product ? product.name : 'Unknown' };
+        });
+        const customer = customers.find(cust => cust.id === invoice.customer_id);
+        return {
+            ...invoice,
+            line_items: invoiceLineItems,
+            customer_name: customer ? customer.name : 'Unknown'
+        };
     }
     return null;
 };

@@ -37,7 +37,7 @@ exports.getAll = (offset, limit, search, sortBy, sortOrder) => {
 
     // Apply pagination
     const totalCount = products.length;
-    products = products.slice(offset, offset + limit);
+    products = products.slice(offset, Number(offset) + Number(limit));
 
     // Return products and total count
     return { products, totalCount };
