@@ -30,16 +30,6 @@
     "updated_at": "2024-06-09T16:24:36.763Z"
   },
   {
-    "product_id": "484bf0ac-3e90-439f-be4e-abaf8e495596",
-    "quantity": "10",
-    "rate": "100000",
-    "amount": 1000000,
-    "line_item_id": "df73d0d8-e156-4dd2-8c4d-3fe29cf813cf",
-    "invoice_id": "60e65094-f0f4-4686-910b-360da41b4881",
-    "created_at": "2024-06-09T17:14:48.017Z",
-    "updated_at": "2024-06-09T17:14:48.017Z"
-  },
-  {
     "product_id": "352ea163-02e5-47e1-b246-e52393ce0ff1",
     "quantity": "8",
     "rate": "100000",
@@ -78,16 +68,6 @@
     "invoice_id": "ffeb18b2-ce7d-4d43-a47b-fdcaa5997604",
     "created_at": "2024-06-10T11:28:54.805Z",
     "updated_at": "2024-06-10T11:28:54.805Z"
-  },
-  {
-    "product_id": "305f6a28-64c7-4206-bf2e-c560680c0c6a",
-    "quantity": "10",
-    "rate": "150000",
-    "amount": 1500000,
-    "line_item_id": "64f8b60e-ce87-4b5c-84f1-77f21215904c",
-    "invoice_id": "b172ae22-9194-47f1-816e-6c5e531f9a3d",
-    "created_at": "2024-06-10T11:29:08.790Z",
-    "updated_at": "2024-06-10T11:29:08.790Z"
   },
   {
     "product_id": "cae93862-5c7b-491c-8036-9a7284bd1c15",
@@ -130,23 +110,33 @@
     "updated_at": "2024-06-10T14:00:10.722Z"
   },
   {
-    "product_id": "4e430a4a-ca60-4e5f-8ee7-3b4097b6c6e5",
-    "quantity": "1",
-    "rate": "50000",
-    "amount": 50000,
-    "line_item_id": "62649ded-25e7-4a0b-be0b-2b1ed1c87eed",
-    "invoice_id": "cb883d34-75f3-4b8b-97e2-f83c7a25e746",
-    "created_at": "2024-06-10T14:25:36.689Z",
-    "updated_at": "2024-06-10T14:25:36.689Z"
+    "product_id": "9733d25c-c6cb-44ef-8267-a4fdbb500665",
+    "quantity": "10",
+    "rate": "100000",
+    "amount": 1000000,
+    "line_item_id": "ba6c926b-c9da-4afe-93c0-bae1eb95be92",
+    "invoice_id": "60e65094-f0f4-4686-910b-360da41b4881",
+    "created_at": "2024-06-11T02:45:14.282Z",
+    "updated_at": "2024-06-11T02:45:14.283Z"
   },
   {
-    "product_id": "cae93862-5c7b-491c-8036-9a7284bd1c15",
+    "product_id": "4e430a4a-ca60-4e5f-8ee7-3b4097b6c6e5",
+    "quantity": "10",
+    "rate": "100",
+    "amount": 1000,
+    "line_item_id": "cdf2eb8b-a7ff-416f-9ed2-c35d28e40364",
+    "invoice_id": "60e65094-f0f4-4686-910b-360da41b4881",
+    "created_at": "2024-06-11T02:45:14.283Z",
+    "updated_at": "2024-06-11T02:45:14.283Z"
+  },
+  {
+    "product_id": "305f6a28-64c7-4206-bf2e-c560680c0c6a",
     "quantity": "1",
-    "rate": "2000",
-    "amount": 2000,
-    "line_item_id": "6bb7f54a-4d2e-498e-9421-b618c3536648",
-    "invoice_id": "cb883d34-75f3-4b8b-97e2-f83c7a25e746",
-    "created_at": "2024-06-10T14:25:36.689Z",
-    "updated_at": "2024-06-10T14:25:36.689Z"
+    "rate": "100000",
+    "amount": 100000,
+    "line_item_id": "d9a8bbd4-3738-4a27-a5db-dbe1cfe3c2df",
+    "invoice_id": "01df3249-0721-4f6b-aea8-34706476bfca",
+    "created_at": "2024-06-11T02:45:54.822Z",
+    "updated_at": "2024-06-11T02:45:54.822Z"
   }
 ]
